@@ -12,7 +12,7 @@ export const toggleTodo = todoId => ({
 });
 
 export const SET_TODO_TEXT = 'SET_TODO_TEXT'
-export const setEditingTodo = text => ({
+export const setTodoText = text => ({
     type: SET_TODO_TEXT,
     text: text
 });
