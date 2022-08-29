@@ -16,3 +16,15 @@ export const setTodoText = text => ({
     type: SET_TODO_TEXT,
     text: text
 });
+
+export const SET_EDITING_TODO = 'SET_EDITING_TODO'
+export const setEditingTodo = todo => ({
+    type: SET_EDITING_TODO,
+    todo: todo
+});
+
+export const UPDATE_TODO = 'UPDATE_TODO'
+export const updateTodo = todo => ({
+    type: UPDATE_TODO,
+    todo: todo
+});

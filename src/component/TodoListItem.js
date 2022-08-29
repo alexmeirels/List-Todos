@@ -1,10 +1,12 @@
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-const TodoListItem = ({todo, onPressTodo}) => (
+const TodoListItem = ({todo, onPressTodo, onLongPressTodo}) => (
 
     <TouchableOpacity
-        onPress={onPressTodo}>
+        onPress={onPressTodo}
+        onLongPress={onLongPressTodo}
+        >    
         <View style={style.line}>
             <Text style={[
                 style.lineText,
