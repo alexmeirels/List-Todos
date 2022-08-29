@@ -13,10 +13,10 @@ class TodoForm extends React.Component {
         }
     }
 
-    onChangeText(){
+    onChangeText(text){
         this.setState({
-            text: 'ok'
-        })
+            text
+        });
     }
     onPress(){
         this.props.dispatchAddTodo(this.state.text)
@@ -28,16 +28,16 @@ class TodoForm extends React.Component {
         return(
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
-                    <Text> ENTRE</Text>
+                    <Text> ------------------------------</Text>
                     <Input 
-                        onChangeText={text => this.onChangeText()}
+                        onChangeText={text => this.onChangeText(text)}
                         value={text}
                     />
-                    <Text> ENTRE</Text>
+                    <Text> ------------------------------</Text>
                 </View>
                 <View>
                     <Button 
-                        onPress={() => console.log()}
+                        onPress={() => this.onPress()}
                         title="add"
                         style={styles.buttonContainer}
                     />

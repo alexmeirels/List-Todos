@@ -1,20 +1,17 @@
 
-import { ADD_TODO } from "../actions"
+import { ADD_TODO, TOGGLE_TODO } from "../actions"
 
-const initialState = {
-    value : [],
-    newTodo: null
-}
 
-const todoListReducer = (state = initialState, action) => {
+const todoListReducer = (state = [], action) => {
     switch(action.type) {
         case ADD_TODO:
-            return{
-                ...state,
-                newTodo: action.text
-
+            const newTodo = {
+                text: action.text
             }
+            return [...state, newTodo]
+        case TOGGLE_TODO:
 
+            return
         default:
             return state
     }

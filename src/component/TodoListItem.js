@@ -1,15 +1,15 @@
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-const TodoListItem = ({todo}) => {
+const TodoListItem = ({todo}) => (
 
     <TouchableOpacity
-      onPress={() => {}}>
-      <View style={style.line}>
-        <Text style={style.lineText}>{todo.text}</Text>
-      </View>
+        onPress={() => {}}>
+        <View style={style.line}>
+            <Text style={style.lineText}>{todo.text}</Text>
+        </View>
     </TouchableOpacity>
-};
+);
 const style = StyleSheet.create({
   line: {
     height: 70,
